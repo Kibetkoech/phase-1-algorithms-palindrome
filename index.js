@@ -1,25 +1,9 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // Convert the word into an array, reverse it, and join it back
+  const reversed = word.split("").reverse().join("");
+  // Return true if the word is the same forward and backward
+  return word === reversed;
 }
 
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
-
-// You can run `node index.js` to view these console logs
-if (require.main === module) {
-  // add your own custom tests in here
-  console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
-
-  console.log("");
-
-  console.log("Expecting: false");
-  console.log("=>", isPalindrome("robot"));
-}
-
+// Export (if your tests use require)
 module.exports = isPalindrome;
